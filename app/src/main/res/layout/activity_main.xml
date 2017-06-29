@@ -10,38 +10,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"/>
+            android:layout_height="72dp"
+            android:text="QuizApp - Travel and Geography"
+            android:gravity="center"
+            android:textSize="24sp"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"/>
+            android:text="What is the largest country in South America?"/>
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/question1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"/>
+            android:inputType="text"
+            android:hint="Enter your answer here"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"/>
+            android:text="Submit Answer"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button"/>
     </LinearLayout>
 </ScrollView>

@@ -79,7 +79,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"/>
+            android:text="What ado All Inclusive resorts include"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,18 +87,18 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/checkBox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="CheckBox"/>
+                android:text="All meals"/>
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="CheckBox"/>
+                android:text="All drinks"/>
 
         </LinearLayout>
 
@@ -108,18 +108,18 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkBox7"
+                android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="CheckBox"/>
+                android:text="All activities"/>
 
             <CheckBox
-                android:id="@+id/checkBox6"
+                android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="CheckBox"/>
+                android:text="All transfers"/>
         </LinearLayout>
 
         <Button

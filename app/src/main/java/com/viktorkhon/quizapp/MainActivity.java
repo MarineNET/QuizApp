@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -39,10 +40,17 @@ public class MainActivity extends AppCompatActivity {
         } else {
             wrongAnswer++;
         }
+        if (answerForQuestion3()) {
+            rightAnswer++;
+        } else {
+            wrongAnswer++;
+        }
         Toast.makeText(this,
                 "You have " + rightAnswer + " correct and " +
                         wrongAnswer +" incorrect answers"
                 , Toast.LENGTH_LONG).show();
+        rightAnswer = 0;
+        wrongAnswer = 0;
     }
 
     private boolean answerForQuestion1() {
@@ -75,6 +83,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean answerForQuestion2() {
         RadioButton answer2 = (RadioButton) findViewById(R.id.radioSwitzerland);
         if (answer2.isChecked()) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean answerForQuestion3() {
+        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
+        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkBox4);
+        if (checkBox1.isChecked() && checkBox2.isChecked() &&
+                !checkBox3.isChecked() && !checkBox4.isChecked()) {
             return true;
         }
         return false;

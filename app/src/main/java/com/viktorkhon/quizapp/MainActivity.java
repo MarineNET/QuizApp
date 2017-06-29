@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,25 +32,23 @@ public class MainActivity extends AppCompatActivity {
     int wrongAnswer = 0;
 
     public void submitButton () {
-        if (answerForQuestion1()) {
-            rightAnswer++;
-        } else {
-            wrongAnswer++;
-        }
-        if (answerForQuestion2()) {
-            rightAnswer++;
-        } else {
-            wrongAnswer++;
-        }
-        if (answerForQuestion3()) {
-            rightAnswer++;
-        } else {
-            wrongAnswer++;
+        boolean [] allAnswers = new boolean[3];
+        allAnswers[0] = answerForQuestion1();
+        allAnswers[1] = answerForQuestion2();
+        allAnswers[2] = answerForQuestion3();
+
+        for (int i = 0; i < allAnswers.length; i++) {
+            if (allAnswers[i]) {
+                rightAnswer++;
+            } else {
+                wrongAnswer++;
+            }
         }
         Toast.makeText(this,
                 "You have " + rightAnswer + " correct and " +
                         wrongAnswer +" incorrect answers"
                 , Toast.LENGTH_LONG).show();
+
         rightAnswer = 0;
         wrongAnswer = 0;
     }
@@ -99,5 +99,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-
 }

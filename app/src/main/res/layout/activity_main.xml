@@ -87,14 +87,14 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/checkBox3.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="All meals"/>
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/checkBox3.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -108,14 +108,14 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/checkBox3.3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="All activities"/>
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox3.4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -135,6 +135,52 @@
             android:inputType="text"
             android:hint="Enter your answer here"/>
 
+        <TextView
+            android:id="@+id/question5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3) What type of amenities do Ocean Cruises generally provide?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox5.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="All meals"/>
+
+            <CheckBox
+                android:id="@+id/checkBox5.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="All drinks"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox5.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Exciting destinations"/>
+
+            <CheckBox
+                android:id="@+id/checkBox5.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Broadway Style shows"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/question6"

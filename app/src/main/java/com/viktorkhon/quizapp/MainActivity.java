@@ -1,6 +1,5 @@
 package com.viktorkhon.quizapp;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,12 +36,13 @@ public class MainActivity extends AppCompatActivity {
     // Upon clicking on Submit Button by a user, this code will run
     public void submitButton () {
         // create a boolean Array to store values for answers from each question
-        boolean [] allAnswers = new boolean[5];
+        boolean [] allAnswers = new boolean[6];
         allAnswers[0] = answerForQuestion1();
         allAnswers[1] = answerForQuestion2();
         allAnswers[2] = answerForQuestion3();
         allAnswers[3] = answerForQuestion4();
-        allAnswers[4] = answerForQuestion6();
+        allAnswers[4] = answerForQuestion5();
+        allAnswers[5] = answerForQuestion6();
 
         // Use for loop to check each answer and count how many a user got right
         // or wrong
@@ -114,10 +114,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean answerForQuestion3() {
-        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
-        CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
-        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkBox4);
+        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox3_1);
+        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox3_2);
+        CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkBox3_3);
+        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkBox3_4);
         // Create an if statement to check if a user has chosen exactly checkBox1 AND
         // checkBox2, and NOT checkBox3 NOR checkBox4
         if (checkBox1.isChecked() && checkBox2.isChecked() &&
@@ -140,6 +140,22 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         // return false if the input is incorrect
+        return false;
+    }
+
+    public boolean answerForQuestion5() {
+        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox5_1);
+        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox5_2);
+        CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkBox5_3);
+        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkBox5_4);
+
+        // Create an if statement to check if a user has chosen all boxes
+        if (checkBox1.isChecked() && checkBox2.isChecked() &&
+                checkBox3.isChecked() && checkBox4.isChecked()) {
+            // If all boxes are checked, return true
+            return true;
+        }
+        // If any other combination is chosen, return false
         return false;
     }
 

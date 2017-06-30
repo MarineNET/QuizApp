@@ -1,5 +1,6 @@
 package com.viktorkhon.quizapp;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +8,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     // right and wrong answers to a user
     private int rightAnswer = 0;
     private int wrongAnswer = 0;
+
+    CheckBoxes answer3 = new CheckBoxes();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Upon clicking on Submit Button by a user, this code will run
-    private void submitButton () {
+    public void submitButton () {
         // create a boolean Array to store values for answers from each question
-        boolean [] allAnswers = new boolean[3];
+        boolean [] allAnswers = new boolean[4];
         allAnswers[0] = answerForQuestion1();
         allAnswers[1] = answerForQuestion2();
         allAnswers[2] = answerForQuestion3();
+        allAnswers[3] = answerForQuestion4();
 
         // Use for loop to check each answer and count how many a user got right
         // or wrong
@@ -111,9 +114,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    // Check to see if a user chose 2 correct answers out of 4 available CheckBoxes
     public boolean answerForQuestion3() {
-        // Find each out of 4 CheckBoxes by their ID and cast it to CheckBox
         CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
         CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
         CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
@@ -128,4 +129,19 @@ public class MainActivity extends AppCompatActivity {
         // If any other combination is chosen, return false
         return false;
     }
+
+    // Check if user's input is equal to the answer "greece"
+    public boolean answerForQuestion4() {
+        // Find EditText View {@id answer4} and cast it as EditText
+        EditText answer4 = (EditText) findViewById(R.id.answer4);
+        // Accept user's input and stores it as a lower case String
+        String answer = answer4.getText().toString().toLowerCase();
+        // use .equals method to compare the String from a user to answer "greece"
+        if (answer.equals("greece")) {
+            return true;
+        }
+        // return false if the input is incorrect
+        return false;
+    }
+
 }

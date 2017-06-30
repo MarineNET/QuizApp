@@ -79,7 +79,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What ado All Inclusive resorts include"/>
+            android:text="3) What do All Inclusive resorts always include in the package?"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,12 +122,25 @@
                 android:text="All transfers"/>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/question4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4) Which country is also called the Hellenic Republic?"/>
+
+        <EditText
+            android:id="@+id/answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Enter your answer here"/>
+
+
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Submit Answer"/>
-
     </LinearLayout>
 </ScrollView>

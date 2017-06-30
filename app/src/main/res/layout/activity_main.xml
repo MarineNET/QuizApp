@@ -50,28 +50,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Switzerland"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonQuestion3"/>
 
         <RadioButton
             android:id="@+id/radioEngland"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="England"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonQuestion3"/>
 
         <RadioButton
             android:id="@+id/radioFrance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="France"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonQuestion3"/>
 
         <RadioButton
             android:id="@+id/radioNorway"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Norway"
-            android:onClick="radioButtonClicked"/>
+            android:onClick="radioButtonQuestion3"/>
 
         </RadioGroup>
 
@@ -136,6 +136,45 @@
             android:hint="Enter your answer here"/>
 
 
+        <TextView
+            android:id="@+id/question6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6) The Straight of Gibraltar connects the Atlantic Ocean with which Sea?"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioBlackSea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Black Sea"
+                android:onClick="radioButtonQuestion6"/>
+
+            <RadioButton
+                android:id="@+id/radioMediterranean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mediterranean"
+                android:onClick="radioButtonQuestion6"/>
+
+            <RadioButton
+                android:id="@+id/radioGibraltar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gibraltar"
+                android:onClick="radioButtonQuestion6"/>
+
+            <RadioButton
+                android:id="@+id/radioDeadSea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dead Sea"
+                android:onClick="radioButtonQuestion6"/>
+
+        </RadioGroup>
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"

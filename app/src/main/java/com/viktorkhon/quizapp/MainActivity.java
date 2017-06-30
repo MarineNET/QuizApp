@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private int rightAnswer = 0;
     private int wrongAnswer = 0;
 
-    CheckBoxes answer3 = new CheckBoxes();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,11 +37,12 @@ public class MainActivity extends AppCompatActivity {
     // Upon clicking on Submit Button by a user, this code will run
     public void submitButton () {
         // create a boolean Array to store values for answers from each question
-        boolean [] allAnswers = new boolean[4];
+        boolean [] allAnswers = new boolean[5];
         allAnswers[0] = answerForQuestion1();
         allAnswers[1] = answerForQuestion2();
         allAnswers[2] = answerForQuestion3();
         allAnswers[3] = answerForQuestion4();
+        allAnswers[4] = answerForQuestion6();
 
         // Use for loop to check each answer and count how many a user got right
         // or wrong
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Create onClick attribute on each RadioButton in XML and use it to create
     // a new method that will allow a user to choose only 1 out of 4 answers
-    public void radioButtonClicked(View view) {
+    public void radioButtonQuestion3(View view) {
         // Check to see if a user clicked on 1 of the 4 radio buttons and store answer
         // in boolean checked
         boolean checked = ((RadioButton) view).isChecked();
@@ -144,4 +143,37 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
+    // Create onClick attribute on each RadioButton in XML and use it to create
+    // a new method that will allow a user to choose only 1 out of 4 answers
+    public void radioButtonQuestion6(View view) {
+        // Check to see if a user clicked on 1 of the 4 radio buttons and store answer
+        // in boolean checked
+        boolean checked = ((RadioButton) view).isChecked();
+        // use switch loop to check all 4 RadioButtons IDs for a click
+        // Once a click is detected, the loop breaks and no more checks are allowed
+        switch (view.getId()) {
+            case R.id.radioBlackSea:
+                if (checked)
+                    break;
+            case R.id.radioMediterranean:
+                if (checked)
+                    break;
+            case R.id.radioGibraltar:
+                if (checked)
+                    break;
+            case R.id.radioDeadSea:
+                if (checked)
+                    break;
+        }
+    }
+
+    // Assign answer to RadioButton {@id radioMediterranean} and create an if statement
+    // to check if the user chose the correct button
+    public boolean answerForQuestion6() {
+        RadioButton answer6 = (RadioButton) findViewById(R.id.radioMediterranean);
+        if (answer6.isChecked()) {
+            return true;
+        }
+        return false;
+    }
 }

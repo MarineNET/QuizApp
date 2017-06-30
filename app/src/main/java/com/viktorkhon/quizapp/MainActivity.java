@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private int rightAnswer = 0;
     private int wrongAnswer = 0;
 
+    CheckedBox answer3 = new CheckedBox();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         boolean [] allAnswers = new boolean[6];
         allAnswers[0] = answerForQuestion1();
         allAnswers[1] = answerForQuestion2();
-        allAnswers[2] = answerForQuestion3();
+        allAnswers[2] = answer3.answerForQuestion3();
         allAnswers[3] = answerForQuestion4();
         allAnswers[4] = answerForQuestion5();
         allAnswers[5] = answerForQuestion6();
@@ -113,21 +115,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public boolean answerForQuestion3() {
-        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox3_1);
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox3_2);
-        CheckBox checkBox3 = (CheckBox) findViewById(R.id.checkBox3_3);
-        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkBox3_4);
-        // Create an if statement to check if a user has chosen exactly checkBox1 AND
-        // checkBox2, and NOT checkBox3 NOR checkBox4
-        if (checkBox1.isChecked() && checkBox2.isChecked() &&
-                !checkBox3.isChecked() && !checkBox4.isChecked()) {
-            // If only checkBox1 AND checkBox2 are chosen, return true
-            return true;
-        }
-        // If any other combination is chosen, return false
-        return false;
-    }
+
 
     // Check if user's input is equal to the answer "greece"
     public boolean answerForQuestion4() {

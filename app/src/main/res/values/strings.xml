@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="header">QuizApp - Travel and Geography</string>
+    <string name="question1">1) What is the largest country in South America?</string>
+    <string name="hint">Enter your answer here</string>
+    <string name="question2">2) What is Europe\'s most mountainous country?</string>
+    <string name="Switzerland">Switzerland</string>
+    <string name="England">England</string>
+    <string name="France">France</string>
+    <string name="Norway">Norway</string>
+    <string name="question3">3) What do All Inclusive resorts always include in the package?
+    </string>
+    <string name="meals">All meals</string>
+    <string name="drinks">All drinks</string>
+    <string name="activities">All activities</string>
+    <string name="transfers">All transfers</string>
+    <string name="question4">4) Which country is also called the Hellenic Republic?"</string>
+    <string name="question5">5) What type of amenities do Ocean Cruises generally provide?
+    </string>
+    <string name="destinations">Exciting destinations</string>
+    <string name="shows">Broadway Style shows</string>
+    <string name="question6">6) The Straight of Gibraltar connects the Atlantic Ocean with which
+        Sea?</string>
+    <string name="blackSea">Black Sea</string>
+    <string name="Mediterranean">Mediterranean</string>
+    <string name="Gibraltar">Gibraltar</string>
+    <string name="deadSea">Dead Sea</string>
+    <string name="submit">Submit Answer</string>
+
+
 </resources>

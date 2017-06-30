@@ -18,28 +18,29 @@
             android:id="@+id/question1"
             android:layout_width="match_parent"
             android:layout_height="72dp"
-            android:text="QuizApp - Travel and Geography"
+            android:text="@string/header"
             android:gravity="center"
             android:textSize="24sp"/>
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1) What is the largest country in South America?"/>
+            style="@style/TextViewDims"
+            android:text="@string/question1"/>
 
         <EditText
             android:id="@+id/answer1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Enter your answer here"/>
+            android:hint="@string/hint"/>
+
+        <View
+            style="@style/view"/>
 
         <TextView
             android:id="@+id/question2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2) What is Europe's most mountainous country?"/>
+            style="@style/TextViewDims"
+            android:text="@string/question2"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -49,37 +50,39 @@
             android:id="@+id/radioSwitzerland"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Switzerland"
+            android:text="@string/Switzerland"
             android:onClick="radioButtonQuestion3"/>
 
         <RadioButton
             android:id="@+id/radioEngland"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="England"
+            android:text="@string/England"
             android:onClick="radioButtonQuestion3"/>
 
         <RadioButton
             android:id="@+id/radioFrance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="France"
+            android:text="@string/France"
             android:onClick="radioButtonQuestion3"/>
 
         <RadioButton
             android:id="@+id/radioNorway"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Norway"
+            android:text="@string/Norway"
             android:onClick="radioButtonQuestion3"/>
 
         </RadioGroup>
 
+        <View
+            style="@style/view"/>
+
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="3) What do All Inclusive resorts always include in the package?"/>
+            style="@style/TextViewDims"
+            android:text="@string/question3"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,14 +94,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All meals"/>
+                android:text="@string/meals"/>
 
             <CheckBox
                 android:id="@+id/checkBox3.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All drinks"/>
+                android:text="@string/drinks"/>
 
         </LinearLayout>
 
@@ -112,34 +115,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All activities"/>
+                android:text="@string/activities"/>
 
             <CheckBox
                 android:id="@+id/checkBox3.4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All transfers"/>
+                android:text="@string/transfers"/>
         </LinearLayout>
+
+        <View
+            style="@style/view"/>
 
         <TextView
             android:id="@+id/question4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="4) Which country is also called the Hellenic Republic?"/>
+            style="@style/TextViewDims"
+            android:text="@string/question4"/>
 
         <EditText
             android:id="@+id/answer4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Enter your answer here"/>
+            android:hint="@string/hint"/>
+
+        <View
+            style="@style/view"/>
 
         <TextView
             android:id="@+id/question5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="3) What type of amenities do Ocean Cruises generally provide?"/>
+            style="@style/TextViewDims"
+            android:text="@string/question5"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,14 +158,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All meals"/>
+                android:text="@string/meals"/>
 
             <CheckBox
                 android:id="@+id/checkBox5.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All drinks"/>
+                android:text="@string/drinks"/>
 
         </LinearLayout>
 
@@ -172,21 +179,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Exciting destinations"/>
+                android:text="@string/destinations"/>
 
             <CheckBox
                 android:id="@+id/checkBox5.4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Broadway Style shows"/>
+                android:text="@string/shows"/>
         </LinearLayout>
+
+        <View
+            style="@style/view"/>
 
         <TextView
             android:id="@+id/question6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="6) The Straight of Gibraltar connects the Atlantic Ocean with which Sea?"/>
+            style="@style/TextViewDims"
+            android:text="@string/question6"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -196,28 +205,28 @@
                 android:id="@+id/radioBlackSea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Black Sea"
+                android:text="@string/blackSea"
                 android:onClick="radioButtonQuestion6"/>
 
             <RadioButton
                 android:id="@+id/radioMediterranean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mediterranean"
+                android:text="@string/Mediterranean"
                 android:onClick="radioButtonQuestion6"/>
 
             <RadioButton
                 android:id="@+id/radioGibraltar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gibraltar"
+                android:text="@string/Gibraltar"
                 android:onClick="radioButtonQuestion6"/>
 
             <RadioButton
                 android:id="@+id/radioDeadSea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dead Sea"
+                android:text="@string/deadSea"
                 android:onClick="radioButtonQuestion6"/>
 
         </RadioGroup>
@@ -225,7 +234,6 @@
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Submit Answer"/>
+            android:text="@string/submit"/>
     </LinearLayout>
 </ScrollView>
